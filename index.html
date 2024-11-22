@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-blue-800 via-indigo-600 to-purple-900 min-h-screen flex flex-col items-center justify-center text-white font-montserrat">
+    <div class="bg-white bg-opacity-10 backdrop-blur-xl rounded-xl p-6 w-96 shadow-xl">
+        <div class="flex items-center mb-6">
+            <input id="inputCity" class="w-full p-3 rounded-l-lg bg-gray-100 text-gray-800 placeholder-gray-500 focus:outline-none" placeholder="Enter city name" type="text">
+            <button id="fetchWeather" class="px-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-r-lg">
+                Get Weather
+            </button>
+        </div>
+        <div id="weatherDetails" class="text-center py-4 space-y-3">
+            <img id="icon" class="hidden mx-auto" src="" alt="Weather Icon" width="80">
+            <h2 id="locationName" class="text-lg font-bold"></h2>
+            <p id="temperatureInfo" class="text-md"></p>
+            <p id="updateTime" class="text-sm"></p>
+        </div>
+    </div>
+    <div id="locationDetails" class="bg-gray-900 bg-opacity-20 backdrop-blur-md rounded-xl p-6 w-96 shadow-xl mt-6 text-center hidden">
+        <h2 class="text-lg font-semibold">Location Details</h2>
+        <p id="regionInfo" class="text-md"></p>
+        <p id="countryInfo" class="text-md"></p>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
